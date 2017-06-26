@@ -18,4 +18,3 @@ A commit is when you record changes to a repo. A good commit message should be s
 
 A merge conflict is when you integrate another branch to your current branch and there is some type of discrepancy.
 
-test
