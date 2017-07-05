@@ -1,0 +1,23 @@
+#contact-info {
+  font-size: .8em;
+}
+.job {
+  background-color: #e9e5dc;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+}
+.accomplishments {
+  font-size: .8em;
+}
+a:link {
+  color: #407c26;
+}
+a:hover {
+  color: yellow;
+}
+section>h2 {
+  font-size: 1.2em;
+}
+
+
