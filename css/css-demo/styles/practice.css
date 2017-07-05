@@ -16,5 +16,8 @@ a:link {
 a:hover {
   color: yellow;
 }
+section>h2 {
+  font-size: 1.2em;
+}
 
 
