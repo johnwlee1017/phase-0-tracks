@@ -10,3 +10,11 @@
 .accomplishments {
   font-size: .8em;
 }
+a:link {
+  color: #407c26;
+}
+a:hover {
+  color: yellow;
+}
+
+
