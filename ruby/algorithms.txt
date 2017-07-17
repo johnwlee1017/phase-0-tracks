@@ -1,0 +1,23 @@
+Release 0:
+
+How to use an elevator:
+# of buttons = total number of floors available
+Number on button = the floor the elevator will go to
+Pressing button = to activate elevator
+If button is pressed, then elevator will go to the floor
+
+Release 1:
+
+Washing the dishes:
+# of dishes in the sink = # of dishes to be washed
+Tools = soap + sponge + water
+Dirty = food on dish
+Clean = no food on dish
+Take Dirty dish from sink, apply tools on dish until Clean dish
+If Clean dish, remove from sink
+Repeat until # of dishes in the sink = 0
+
+
+
+
+
