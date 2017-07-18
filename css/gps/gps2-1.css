@@ -1,3 +1,28 @@
 body {
-  background-color: lightblue;
+  background-image: url("github.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+.column-1 {
+  background-color: lightblue;
+  float: left;
+  width: 40%;
+  padding: 5%;
+  font-family: helvetica;
+  opacity: .8;
+}
+
+.column-2 {
+ background-color: green;
+ float: right;
+ width: 40%;
+ padding: 5%;
+ font-family: helvetica;
+ opacity: .8;
+}
+
+footer {
+  clear: both;
+}
+
