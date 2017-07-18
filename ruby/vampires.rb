@@ -3,11 +3,11 @@ employee_name = gets.chomp
 
 # determine if employee name is known vampire name
 if employee_name == "Drake Cula"
-  fake_name = true
+  vampire_name = true
 elsif employee_name == "Tu Fang"
-  fake_name = true
+  vampire_name = true
 else
-  fake_name = false
+  vampire_name = false
 end
 
 puts "How old are you?"
@@ -37,6 +37,18 @@ if insurance == "y"
   insurance = true
 else
   insurance = false
+end
+
+if right_age && (garlic_bread || insurance)
+  puts "Probably not a vampire"
+elsif !right_age && (!garlic_bread || !insurance) && (garlic_bread || insurance)
+  puts "Probably a vampire"
+elsif !right_age && !garlic_bread && !insurance
+  puts "Almost certainly a vampire"
+elsif vampire_name
+  puts "Defintely a vampire"
+else
+  puts "Results inconclusive"
 end
 
 
