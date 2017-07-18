@@ -39,14 +39,14 @@ else
   insurance = false
 end
 
-if right_age && (garlic_bread || insurance)
+if vampire_name
+  puts "Defintely a vampire"
+elsif right_age && (garlic_bread || insurance)
   puts "Probably not a vampire"
 elsif !right_age && (!garlic_bread || !insurance) && (garlic_bread || insurance)
   puts "Probably a vampire"
 elsif !right_age && !garlic_bread && !insurance
   puts "Almost certainly a vampire"
-elsif vampire_name
-  puts "Defintely a vampire"
 else
   puts "Results inconclusive"
 end
