@@ -45,23 +45,16 @@ until employee_count == 0
     insurance = false
   end
 
-  allergies = false
-  until allergies
-    puts "Any allergies? (name one at a time)"
+  puts "Any allergies? (name one at a time)"
+  allergies = 0
+  until allergies == "sunshine" || allergies == "done"
     allergies = gets.chomp
-
-    if allergies == "done"
-      allergies = true
-    elsif allergies == "sunshine"
-      puts "Probably a vampire"
-      allergies = true
-    else
-      allergies = false
-    end
   end
 
   if vampire_name
     puts "Defintely a vampire"
+  elsif allergies == "sunshine"
+    puts "Probably a vampire"
   elsif right_age && (garlic_bread || insurance)
     puts "Probably not a vampire"
   elsif !right_age && (!garlic_bread || !insurance) && (  garlic_bread || insurance)
