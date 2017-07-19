@@ -71,7 +71,7 @@ until employee_count == 0
   else
     puts "Results inconclusive"
   end
-  employee_count -=1
+  employee_count -= 1
 end
 
 puts "Actually never mind! What do these questions have to do with anything? Let's all be friends."
