@@ -29,7 +29,7 @@ until employee_count == 0
     right_age = false
   end
 
-  puts "Our company cafeteria serves garlic bread. Should we  order some for you? (y/n)"
+  puts "Our company cafeteria serves garlic bread. Should we order some for you? (y/n)"
   garlic_bread = gets.chomp
   if garlic_bread == "y"
     garlic_bread = true
@@ -37,12 +37,27 @@ until employee_count == 0
     garlic_bread = false
   end
 
-  puts "Would you like to enroll in the company’s health  insurance? (y/n)"
+  puts "Would you like to enroll in the company’s health insurance? (y/n)"
   insurance = gets.chomp
   if insurance == "y"
     insurance = true
   else
     insurance = false
+  end
+
+  allergies = false
+  until allergies
+    puts "Any allergies? (name one at a time)"
+    allergies = gets.chomp
+
+    if allergies == "done"
+      allergies = true
+    elsif allergies == "sunshine"
+      puts "Probably a vampire"
+      allergies = true
+    else
+      allergies = false
+    end
   end
 
   if vampire_name
@@ -59,6 +74,6 @@ until employee_count == 0
   employee_count -=1
 end
 
-
+puts "Actually never mind! What do these questions have to do with anything? Let's all be friends."
 
 
