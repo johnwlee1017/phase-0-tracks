@@ -33,6 +33,24 @@ def fake_name(full_name)
       "p"
     elsif letter == "t"
       "v"
+    elsif letter == "E"
+      "i"
+    elsif letter == "I"
+      "o"
+    elsif letter == "O"
+      "u"
+    elsif letter == "U"
+      "a"
+    elsif letter == "Z"
+      "b"
+    elsif letter == "D"
+      "f"
+    elsif letter == "H"
+      "j"
+    elsif letter == "N"
+      "p"
+    elsif letter == "T"
+      "v"
     elsif letter == " "
       " "
     else
@@ -42,15 +60,6 @@ def fake_name(full_name)
 
   final_name = next_letter.join('')
 
-  #combined_name = fake_name.split(' ')
-#
-  #first_name = combined_name[0].capitalize
-#
-  #last_name = combined_name[1].capitalize
-#
-  #final_name = first_name + " " + last_name
-
-  #p final_name
   p final_name
 end
 
@@ -61,7 +70,7 @@ full_name_array = []
 fake_name_array = []
 until user_input == "quit"
   puts "what is your full name?"
-  user_input = gets.chomp.downcase
+  user_input = gets.chomp
 
   full_name_array << user_input
   fake_name_array << fake_name(user_input)
