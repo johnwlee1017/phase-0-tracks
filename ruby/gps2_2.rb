@@ -73,3 +73,21 @@ add_item(new_list, "Ice Cream", 2)
 remove_item(new_list, "tomatoes")
 update_item_quantity(new_list, "onions", 3)
 print_list(new_list)
+
+
+###########################
+###### Reflection #######
+###########################
+
+# What did you learn about pseudocode from working on this challenge?
+# Pseudocoding helps break down the problem into words to help write your code for each step.
+# What are the tradeoffs of using arrays and hashes for this challenge?
+# Using an array helped with converting strings into separate items/elements which we can use to make a hash.
+# What does a method return?
+# A method returns the last line of code in the method.
+# What kind of things can you pass into methods as arguments?
+# You can pass in pretty much anything (strings, integers, arrays, hashses) and also other methods.
+# How can you pass information between methods?
+# You need to have a variable that has equal to the return value of a method, so you can use the variable in other methods.
+# What concepts were solidified in this challenge, and what concepts are still confusing?
+# Manipulating arrays and hashes were solidified in this challenge and also iterating through them. I can't think of a concept in this challenege that is still confusing.
