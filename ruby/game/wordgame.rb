@@ -26,12 +26,12 @@
 class WordGame
   attr_accessor :guess_amount, :correct_word, :user_input, :dashes_array, :dashes_updated
 
-  def initialize
-    @guess_amount = guess_amount
-    @correct_word = correct_word
-    @user_input = user_input
-    @dashes_array = dashes_array
-    @dashes_updated = dashes_updated
+  def initialize # you dont the below since it is in attr_accessor(read and write)
+    # @guess_amount = guess_amount
+    # @correct_word = correct_word
+    # @user_input = user_input
+    # @dashes_array = dashes_array
+    # @dashes_updated = dashes_updated
   end
 
   def correct_word_to_dashes
