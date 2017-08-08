@@ -3,9 +3,9 @@
 # I worked on this challenge [by myself, with: ].
 # We spent [#] hours on this challenge.
 
-# EXPLANATION OF require_relative
-#
-#
+# EXPLANATION OF require_relative:
+# Require_relative pulls code from the file that is mentioned
+# Require takes absolute path to find modules, and require_relative takes a relative path.
 require_relative 'state_data'
 
 class VirusPredictor
