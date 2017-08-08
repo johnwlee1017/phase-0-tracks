@@ -92,3 +92,14 @@ end
 
 #=======================================================================
 # Reflection Section
+
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# -A string was used as the key and other one was a symbol.
+# What does require_relative do? How is it different from require?
+# -Require_relative pulls code from the file that is mentioned. Require takes absolute path to find modules, and require_relative takes a relative path.
+# What are some ways to iterate through a hash?
+# -By using the .each, .each_key, .each_value, or .each_pair methods.
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# -When refactoring virus_effects, having the parameters for the instane methods (that were being called) were not necessary.
+# What concept did you most solidify in this challenge?
+# -The concept of require_relative and require
