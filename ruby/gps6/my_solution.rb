@@ -1,11 +1,13 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: Christopher Grace].
+# We spent [1] hour on this challenge.
 
 # EXPLANATION OF require_relative:
+
 # Require_relative pulls code from the file that is mentioned
 # Require takes absolute path to find modules, and require_relative takes a relative path.
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -17,13 +19,13 @@ class VirusPredictor
   end
   # Calls predicted_deaths and speed_of_spread instance methods
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
   private
   # Prints out a statement that takes a given state's population_density and population, and calculates the number of deaths
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -41,7 +43,7 @@ class VirusPredictor
 
   end
   # Prints a 2nd half of a statement, that takes in the state's population_density and state name, and calculates the speed (months).
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
