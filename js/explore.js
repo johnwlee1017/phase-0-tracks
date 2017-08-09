@@ -12,9 +12,15 @@ function reverse(word) {
     reverse_array.push(word_array[i]);
   }
 
-  return reverse_array.join('')
+  return reverse_array.join('');
 }
 
-var result = reverse("hello")
+var result = reverse("hello");
 
-console.log(reverse("hello"))
+var print = true;
+
+if (print) {
+  console.log(result);
+}
+
+
