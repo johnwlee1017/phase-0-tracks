@@ -47,7 +47,6 @@ function find_word(words, length_array) {
 // console.log(find_word(words, length_array));
 
 ////////////////////////////////////////
-////////////////////////////////////////
 
 var object_1 = {name: "Steven", age: 54};
 var object_2 = {name: "Tamir", age: 54};
@@ -70,6 +69,8 @@ function share_key_value_pair(object_1, object_2) {
 //   console.log("yes");
 // }
 
+////////////////////////////////////////
+
 function array_of_strings(number) {
   var array = [];
   var string = "a";
@@ -81,6 +82,8 @@ function array_of_strings(number) {
   }
   return array;
 }
+
+// Driver Code:
 
 var count = 10
 while (count > 0) {
