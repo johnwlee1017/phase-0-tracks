@@ -44,7 +44,36 @@ function find_word(words, length_array) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
-console.log(find_word(words, length_array))
+console.log(find_word(words, length_array));
+
+////////////////////////////////////////
+////////////////////////////////////////
+
+var object_1 = {name: "Steven", age: 54}
+var object_2 = {name: "Tamir", age: 54}
+
+
+
+function share_key_value_pair(object_1, object_2) {
+  var value_array_1 = [object_1.name, object_1.age];
+  var value_array_2 = [object_2.name, object_2.age];
+
+  console.log(value_array_1)
+  console.log(value_array_2)
+
+  for (var i = 0; i < value_array_1.length; i++) {
+    if (value_array_1.includes(value_array_2[i])) {
+      return true;
+    } else { return false; }
+  }
+}
+
+if (share_key_value_pair(object_1, object_2) === true) {
+  console.log("yes");
+}
+
+
+
 
 
 
