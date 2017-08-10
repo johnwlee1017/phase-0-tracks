@@ -4,19 +4,19 @@
 // create function to find (return) key from the object using the value.
 
 
-var word_array = ["long phrase","longest phrase","longer phrase"]
-var length_array = []
-var words = {}
+// var word_array = ["long phrase","longest phrase","longer phrase"]
+// var length_array = [];
+// var words = {};
 
-for (var i = 0; i < word_array.length; i++) {
-  length_array.push(word_array[i].length);
-}
+// for (var i = 0; i < word_array.length; i++) {
+//   length_array.push(word_array[i].length);
+// }
 
-// console.log(length_array)
+// // console.log(length_array)
 
-for (var i = 0; i < word_array.length; i++) {
-  words[word_array[i]] = length_array[i];
-}
+// for (var i = 0; i < word_array.length; i++) {
+//   words[word_array[i]] = length_array[i];
+// }
 
 // console.log(words)
 
@@ -44,15 +44,13 @@ function find_word(words, length_array) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
-console.log(find_word(words, length_array));
+// console.log(find_word(words, length_array));
 
 ////////////////////////////////////////
 ////////////////////////////////////////
 
-var object_1 = {name: "Steven", age: 54}
-var object_2 = {name: "Tamir", age: 54}
-
-
+var object_1 = {name: "Steven", age: 54};
+var object_2 = {name: "Tamir", age: 54};
 
 function share_key_value_pair(object_1, object_2) {
   var value_array_1 = [object_1.name, object_1.age];
@@ -68,13 +66,13 @@ function share_key_value_pair(object_1, object_2) {
   }
 }
 
-if (share_key_value_pair(object_1, object_2) === true) {
-  console.log("yes");
-}
+// if (share_key_value_pair(object_1, object_2) === true) {
+//   console.log("yes");
+// }
 
 function array_of_strings(number) {
-  var array = []
-  var string = "a"
+  var array = [];
+  var string = "a";
 
   var i = 0
   while (i < number) {
@@ -84,7 +82,29 @@ function array_of_strings(number) {
   return array;
 }
 
-console.log(array_of_strings(2))
+var count = 10
+while (count > 0) {
+  array = array_of_strings(5)
+  console.log(array);
+
+  var word_array = array
+  var length_array = [];
+  var words = {};
+
+  for (var i = 0; i < word_array.length; i++) {
+    length_array.push(word_array[i].length);
+  }
+
+  for (var i = 0; i < word_array.length; i++) {
+    words[word_array[i]] = length_array[i];
+  }
+
+  sort(length_array);
+
+  console.log(find_word(words, length_array));
+
+  count--;
+}
 
 
 
