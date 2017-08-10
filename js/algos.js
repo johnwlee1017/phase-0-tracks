@@ -1,9 +1,10 @@
 // take array (of strings) and find length of each element, and create new array of lengths.
-// with lengths array, add if statement for having largest number to the front. compare each element(index) with each other.
-// create object to have key(word) and value(length) pairs.
+// take array of strings and array of lengths and create object (words) to have key/value pair.
+// create sort function with lengths array, loop and compare each element(index) with each other and swap (to the right) if length is greater than the left element.
+// create function to find (return) key from the object using the value.
 
 
-var word_array = ["word", "longestword", "otherword", "randomword", "wordword"]
+var word_array = ["long phrase","longest phrase","longer phrase"]
 var length_array = []
 var words = {}
 
@@ -11,13 +12,13 @@ for (var i = 0; i < word_array.length; i++) {
   length_array.push(word_array[i].length);
 }
 
-console.log(length_array)
+// console.log(length_array)
 
 for (var i = 0; i < word_array.length; i++) {
   words[word_array[i]] = length_array[i];
 }
 
-console.log(words)
+// console.log(words)
 
 function sort(length_array) {
   var array = length_array;
@@ -34,7 +35,7 @@ function sort(length_array) {
   return length_array;
 }
 
-console.log(sort(length_array))
+// console.log(sort(length_array))
 
 function find_word(words, length_array) {
   var object = words;
