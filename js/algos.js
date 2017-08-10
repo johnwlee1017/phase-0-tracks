@@ -58,13 +58,13 @@ function share_key_value_pair(object_1, object_2) {
   var value_array_1 = [object_1.name, object_1.age];
   var value_array_2 = [object_2.name, object_2.age];
 
-  console.log(value_array_1)
-  console.log(value_array_2)
+  // console.log(value_array_1)
+  // console.log(value_array_2)
 
   for (var i = 0; i < value_array_1.length; i++) {
     if (value_array_1.includes(value_array_2[i])) {
       return true;
-    } else { return false; }
+    }
   }
 }
 
@@ -72,7 +72,19 @@ if (share_key_value_pair(object_1, object_2) === true) {
   console.log("yes");
 }
 
+function array_of_strings(number) {
+  var array = []
+  var string = "a"
 
+  var i = 0
+  while (i < number) {
+    array.push(string.repeat(Math.floor((Math.random() * 10) + 1)));
+    i++;
+  }
+  return array;
+}
+
+console.log(array_of_strings(2))
 
 
 
