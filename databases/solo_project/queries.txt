@@ -1,0 +1,82 @@
+
+1.)Display the information in one table (either table is fine).
+- command:
+SELECT * FROM racers;
+- output:
+1|Marc Marquez|174|true|1
+2|Andrea Dovizioso|158|false|2
+3|Maverick Vinales|150|true|3
+4|Valentino Rossi|141|false|3
+5|Dani Pedrosa|139|true|1
+6|Johann Zarco|99|false|3
+7|Jorge Lorenzo|79|true|2
+8|Jonas Folger|77|false|3
+9|Cal Crutchlow|76|false|1
+10|Danilo Petrucci|75|false|2
+
+2.) Update an item that meets some condition (you can choose a condition that makes sense).
+- command:
+UPDATE racers SET points=165 WHERE id=2;
+SELECT * FROM racers WHERE id=2;
+- output:
+2|Andrea Dovizioso|165|false|2
+
+3.) Display the information in both tables using one query.
+- command:
+SELECT * FROM racers, bikes WHERE racers.bike_id = bikes.id;
+- output:
+1|Marc Marquez|174|true|1|1|Honda
+2|Andrea Dovizioso|165|false|2|2|Ducati
+3|Maverick Vinales|150|true|3|3|Yamaha
+4|Valentino Rossi|141|false|3|3|Yamaha
+5|Dani Pedrosa|139|true|1|1|Honda
+6|Johann Zarco|99|false|3|3|Yamaha
+7|Jorge Lorenzo|79|true|2|2|Ducati
+8|Jonas Folger|77|false|3|3|Yamaha
+9|Cal Crutchlow|76|false|1|1|Honda
+10|Danilo Petrucci|75|false|2|2|Ducati
+
+4.) Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query.
+- command:
+SELECT racers.name, bikes.name FROM racers JOIN bikes ON racers.bike_id = bikes.id;
+- output:
+Marc Marquez|Honda
+Andrea Dovizioso|Ducati
+Maverick Vinales|Yamaha
+Valentino Rossi|Yamaha
+Dani Pedrosa|Honda
+Johann Zarco|Yamaha
+Jorge Lorenzo|Ducati
+Jonas Folger|Yamaha
+Cal Crutchlow|Honda
+Danilo Petrucci|Ducati
+
+5.) Delete an item that meets some condition (you can choose a condition that makes sense).
+- command:
+DELETE FROM racers WHERE id=10;
+SELECT * FROM racers;
+- output:
+1|Marc Marquez|174|true|1
+2|Andrea Dovizioso|165|false|2
+3|Maverick Vinales|150|true|3
+4|Valentino Rossi|141|false|3
+5|Dani Pedrosa|139|true|1
+6|Johann Zarco|99|false|3
+7|Jorge Lorenzo|79|true|2
+8|Jonas Folger|77|false|3
+9|Cal Crutchlow|76|false|1
+
+6.) left join command:
+- command:
+SELECT racers.name, racers.points, bikes.name FROM racers LEFT JOIN bikes ON racers.bike_id = bikes.id;
+- output:
+Marc Marquez|174|Honda
+Andrea Dovizioso|165|Ducati
+Maverick Vinales|150|Yamaha
+Valentino Rossi|141|Yamaha
+Dani Pedrosa|139|Honda
+Johann Zarco|99|Yamaha
+Jorge Lorenzo|79|Ducati
+Jonas Folger|77|Yamaha
+Cal Crutchlow|76|Honda
+
