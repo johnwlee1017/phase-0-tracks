@@ -31,7 +31,11 @@ db.execute(create_table)
 
 def display_tasks(db)
   tasks = db.execute("SELECT * FROM tasks")
-  p tasks
+
+  puts "Here is your Todo List: "
+  tasks.each do |item|
+    puts item[1]
+  end
 end
 
 #### Menu
@@ -64,6 +68,8 @@ if user_selection == 1
   end
 end
 
+#### section 2 - remove items from todo list
+
 if user_selection == 2
   def remove_item_from_table(db, item_to_delete)
     db.execute("DELETE FROM tasks WHERE item = ?", [item_to_delete])
@@ -83,6 +89,15 @@ if user_selection == 2
     end
   end
 end
+
+#### section 3 - view todo list
+
+if user_selection == 3
+  display_tasks(db)
+end
+
+
+
 
 
 
