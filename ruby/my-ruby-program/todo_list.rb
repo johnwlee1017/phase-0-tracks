@@ -36,7 +36,7 @@ end
 
 #### Menu
 
-puts "Welcome to your Todo List, please select (number) from the options below: "
+puts "Welcome to your Todo List, please select (number) frothe  options below: "
 puts "1 - Add item to your todo list"
 puts "2 - Remove item from your todo list"
 puts "3 - View your todo list"
@@ -45,7 +45,6 @@ user_selection = gets.chomp.to_i
 #### section 1 - add items to todo list
 
 if user_selection == 1
-
   def add_items_to_table(db, item)
     db.execute("INSERT INTO tasks (item) VALUES (?)", [item])
   end
@@ -57,6 +56,26 @@ if user_selection == 1
 
     if user_input != "done"
       add_items_to_table(db, user_input)
+    end
+
+    if user_input == "done"
+      finished = true
+    end
+  end
+end
+
+if user_selection == 2
+  def remove_item_from_table(db, item_to_delete)
+    db.execute("DELETE FROM tasks WHERE item = ?", [item_to_delete])
+  end
+
+  finished = false
+  puts "Please remove task(s) from the list (enter 'done' when finished)"
+  until finished == true
+    user_input = gets.chomp
+
+    if user_input != "done"
+      remove_item_from_table(db, user_input)
     end
 
     if user_input == "done"
