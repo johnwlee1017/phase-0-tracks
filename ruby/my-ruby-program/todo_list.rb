@@ -15,3 +15,58 @@
 # create method to add to items to the tasks table.
 # if user is finished and enters "done", it takes user back to the menu
 
+#### create todo_list database and tasks table
+require 'sqlite3'
+
+db = SQLite3::Database.new("todo_list.db")
+
+create_table = <<-SQL
+  CREATE TABLE IF NOT EXISTS tasks (
+    id INTEGER PRIMARY KEY,
+    item VARCHAR(255)
+  )
+SQL
+
+db.execute(create_table)
+
+def display_tasks(db)
+  tasks = db.execute("SELECT * FROM tasks")
+  p tasks
+end
+
+#### Menu
+
+puts "Welcome to your Todo List, please select (number) from the options below: "
+puts "1 - Add item to your todo list"
+puts "2 - Remove item from your todo list"
+puts "3 - View your todo list"
+user_selection = gets.chomp.to_i
+
+#### section 1 - add items to todo list
+
+if user_selection == 1
+
+  def add_items_to_table(db, item)
+    db.execute("INSERT INTO tasks (item) VALUES (?)", [item])
+  end
+
+  finished = false
+  puts "Please add task(s) to the list (enter 'done' when finished)"
+  until finished == true
+    user_input = gets.chomp
+
+    if user_input != "done"
+      add_items_to_table(db, user_input)
+    end
+
+    if user_input == "done"
+      finished = true
+    end
+  end
+end
+
+
+
+
+
+
