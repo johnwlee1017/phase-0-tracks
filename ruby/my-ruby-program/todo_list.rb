@@ -8,11 +8,11 @@
 # create database (todo_list) and add table (tasks) with user input.
 #
 # sections:
-# 1 - add item to todo list
-# if user selects 1, takes user to add item todo list.
+# add/remove item(s) to todo list
+# if user selects section, takes user to add/remove item todo list.
 # display current list (create method to retrieve data from tasks table from db)
-# ask user "Please add the task(s) to the list (and enter "done" when finished)."
-# create method to add to items to the tasks table.
+# ask user "Please add/remove the task(s) to/from the list (and enter "done" when finished)."
+# create method to add/remove items to/from the tasks table.
 # if user is finished and enters "done", it takes user back to the menu
 
 #### create todo_list database and tasks table
