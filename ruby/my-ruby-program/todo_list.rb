@@ -43,8 +43,8 @@ until exit == true
   #### Menu
   puts #for spacing
   puts "Welcome to your Todo List, please select (number) from the options below: "
-  puts "1 - Add item to your todo list"
-  puts "2 - Remove item from your todo list"
+  puts "1 - Add item(s) to your todo list"
+  puts "2 - Remove item(s) from your todo list"
   puts "3 - View your todo list"
   puts "Type 'exit' to leave"
   user_selection = gets.chomp
@@ -61,7 +61,7 @@ until exit == true
 
     finished = false
     puts #for spacing
-    puts "Please add task(s) to the list (enter 'done' when   finished)"
+    puts "Please add task(s) to the list (enter 'done' when finished)"
     until finished == true
       user_input = gets.chomp
 
@@ -87,7 +87,7 @@ until exit == true
 
     finished = false
     puts #for spacing
-    puts "Please remove task(s) from the list (enter 'done' when  finished)"
+    puts "Please remove task(s) from the list (enter 'done' when finished)"
     until finished == true
       user_input = gets.chomp
 
