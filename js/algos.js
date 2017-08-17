@@ -3,8 +3,7 @@
 // create sort function with lengths array, loop and compare each element(index) with each other and swap (to the right) if length is greater than the left element.
 // create function to find (return) key from the object using the value.
 
-
-// var word_array = ["long phrase","longest phrase","longer phrase"]
+// var word_array = ["long prase","longest phrase","longer phrase"]
 // var length_array = [];
 // var words = {};
 
@@ -25,7 +24,7 @@ function sort(length_array) {
 
   for (var i = 0; i < array.length; i++) {
     for (var ii = 0; ii < array.length - i - 1; ii++) {
-      if (array[ii] > array[ii+1]) {
+      ifh (array[ii] > array[ii+1]) {
         var prev_element = array[ii];
         array[ii] = array[ii+1];
         array[ii+1] = prev_element;
