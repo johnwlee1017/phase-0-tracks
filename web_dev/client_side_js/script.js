@@ -31,8 +31,9 @@ element.addEventListener("click", clickable);
 
 // looping through collection of nodes of class (list)
 
-var class_list = document.getElementsByClassName("list2")
+var class_list = document.getElementsByClassName("list")
 
+console.log(class_list)
 
 for (var i = class_list.length - 1; i >= 0; i--) {
     class_list[i].style.color = "blue"
