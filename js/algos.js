@@ -24,7 +24,7 @@ function sort(length_array) {
 
   for (var i = 0; i < array.length; i++) {
     for (var ii = 0; ii < array.length - i - 1; ii++) {
-      ifh (array[ii] > array[ii+1]) {
+      if (array[ii] > array[ii+1]) {
         var prev_element = array[ii];
         array[ii] = array[ii+1];
         array[ii+1] = prev_element;
