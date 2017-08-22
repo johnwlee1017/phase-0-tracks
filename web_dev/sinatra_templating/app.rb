@@ -24,4 +24,23 @@ post '/students' do
   redirect '/'
 end
 
+# add route that will respond to test.erb
+
+get '/test' do
+  @campuses = db.execute("SELECT * FROM campuses")
+  erb :test
+end
+
+# create and delete cities via a form
+post '/test' do
+  db.execute("INSERT INTO campuses (cities) VALUES (?)", [params['cities']])
+  redirect '/test'
+end
+
+post '/test/delete' do
+  db.execute("DELETE FROM campuses WHERE cities = ?", [params['cities']])
+  redirect '/test'
+end
+
 # add static resources
+
